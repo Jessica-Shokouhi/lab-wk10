@@ -1,46 +1,22 @@
-# 4640-ansible-roles-lab
+# Lab week 13
 
-Setup:
+## Cole Kyle Jess
 
-Clone the starter code into your development environment
+## Overview
 
-https://gitlab.com/cit_4640/4640-ansible-roles-lab.git
+This project uses Ansible with the aws_ec2 dynamic inventory to configure two AWS EC2 instances. The configuration was refactored into a playbook using roles for each server. The frontend server runs nginx and serves a simple HTML page.
 
-Create a new `~/.ssh/aws` ssh key
+### Commands needed to run the Ansible configuration
 
-Use the included scripts to add the new key to your aws account
+we looked at the flawed version of the ansible code and then made seperate role files and a improved .yml based off of it.
 
-Run the terraform configuration. This will create two servers, one running Debian the other running Rocky Linux.
+ran like this
 
-Tasks:
+```
+ANSIBLE_CONFIG=./ansible.cfg ansible-playbook -i inventory/aws_ec2.yml playbook.yml
 
-Start by looking at the included Ansible configuration. This includes a dynamic inventory that uses the aws_ec2 plugin.
+```
 
-Refactor the configuration in "plays.yml" into a new "playbook.yml" file. You can delete the plays.yml file when you have your new configuration working.
+### server running on browser
 
-Break out configuration into roles for both servers. (two roles)
-
-Any "files" or "templates" should be moved into a role.
-
-Use handlers in the appropriate locations to reload the nginx server when needed.
-
-Add necessary commands to run your Ansible configuration to the README.md file.
-
-Take a victory screenshot of the HTML document that is being served by your ubuntu "frontend" server. Add this screenshot to your README.md file.
-
-Deliverables:
-
-Demo your frontend server is working, just like most weeks it is a really exciting HTML document.
-
-Submit a public git repository that contains the following files
-
-- README.md
-- server-img.jpg (this can be a png, or other common image format)
-- .gitignore (included, add this before running git commands)
-- ansible/
-    - ansible.cfg
-    - playbook.yml
-    - inventory/
-        - aws_ec2.yml
-    - roles/
-        - ... appropriate directory structure for the roles
+![alt text](image2222.png)
