@@ -19,4 +19,5 @@ ANSIBLE_CONFIG=./ansible.cfg ansible-playbook -i inventory/aws_ec2.yml playbook.
 
 ### server running on browser
 
-![alt text](image2222.png)
+![alt text](server-img.png)
+
