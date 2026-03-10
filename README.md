@@ -1,4 +1,4 @@
-# Lab week 13
+# Lab week 10
 
 ## Cole Kyle Jess
 
@@ -20,4 +20,5 @@ ANSIBLE_CONFIG=./ansible.cfg ansible-playbook -i inventory/aws_ec2.yml playbook.
 ### server running on browser
 
 ![alt text](server-img.png)
+
 
